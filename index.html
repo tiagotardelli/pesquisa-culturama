@@ -15,41 +15,41 @@
                 <!--DADOS PESSOAIS-->
                 <legend>Dados Pessoais</legend>
                 <label for="userName">Nome</label>
-                <input type="text" name="userName" required>
+                <input id="name" type="text" name="userName" required>
                 <br>            
                 <label for="userAge">Idade</label>
-                <input type="number" name="userAge" min="12" max="100" required>
+                <input id="age" type="number" name="userAge" min="12" max="100" required>
                 <br>
                 <label for="birthDate">Data de nascimento</label>
-                <input type="date" name="birthDate">
+                <input id="birthDate" type="date" name="birthDate">
                 <br>
                 <label for="userEmail">E-mail</label>
-                <input type="email" name="userEmail" required>
+                <input id="email" type="email" name="userEmail" required>
                 <br>
                 <label for="userPhoneNumber">Telefone</label>
-                <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" 
+                <input id="userPhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" 
                        placeholder="DDD + número sem espaço ou hífen">
                 <br>
                 <label for="userImage">Upload de foto</label>
-                <input type="file" accept="image/*" name="userImage">
+                <input id="image" type="file" accept="image/*" name="userImage">
             </fieldset>
             <fieldset>
                 <!-- DADOS PERFIL -->
                 <legend>Perfil</legend>
                 
                 <p>Gênero</p>
-                <input type="radio" name="userGender" value="feminino">
+                <input id="fem" type="radio" name="userGender" value="feminino">
                 <label for="userGender">Feminino</label>
 
-                <input type="radio" name="userGender" value="masculino">
+                <input id="masc" type="radio" name="userGender" value="masculino">
                 <label for="userGender">Masculino</label>
 
-                <input type="radio" name="userGender" value="naoInformado">
-                <label for="userGender">Prefiro não informar</label>
+                <input id="notInformed" type="radio" name="userGender" value="naoInformado">
+                <label for="notInformed">Prefiro não informar</label>
                 <br>
                 <label for="maritalStatus">Estado civil:</label>
-                <select name="maritalStatus">
-                    <option value="naoInformado">Selecione...</option>
+                <select name="maritalStatus" id="maritalStatus">
+                    <option value="notInformed">Selecione...</option>
                     <option value="casado">Casado</option>
                     <option value="solteiro">Solteiro</option>
                     <option value="divorciado">Divorciado</option>
@@ -57,7 +57,7 @@
                 </select>
                 <br>
                 <label for="userState">Estado:</label>
-                <select name="userState">
+                <select name="userState" id="state">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -86,6 +86,9 @@
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
                 </select>
+                <br>
+                <label for="userCity">Cidade</label>
+                <input type="text" name="userCity" id="city">
             </fieldset>
             <button type="submit">Enviar</button>
        </form> 
