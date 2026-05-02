@@ -17,14 +17,29 @@
     font-display: swap;
 }
 
+:root{
+    --cor-texto: #333333;
+    --cor-fundo: #f9f9f9;
+}
+
+.theme-high-contrast{
+  --cor-texto: #000000;
+  --cor-fundo: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
-  background-color: #f9f9f9;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
   font-family: "Work Sans", sans-serif;
 }
 
@@ -63,7 +78,7 @@ fieldset {
 
 legend {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.5rem;
   padding: 0 5px;
 }
 
@@ -114,7 +129,7 @@ input[type="file"]{
 small{
     margin-bottom: 20px;
     display: inline-block;
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 
 input:focus{
