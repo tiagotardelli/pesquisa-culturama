@@ -10,7 +10,7 @@
     <title>Pesquisa Culturama</title>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <img src="./assets/img/logo-culturama.png" alt="logo culturama">
         <h1>Pesquisa de opnião</h1>
     </header>
@@ -33,7 +33,8 @@
                 <br>
                 <label for="phoneNumber">Telefone:</label>
                 <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" 
-                       placeholder="DDD + número sem espaço ou hífen">
+                       placeholder="DDD + número sem espaço ou hífen" aria-describedby="phoneHelp">
+                <small id="phoneHelp">Preecha com 11 dígitos no formato DDD + números sem espaços ou hífen.</small>
                 <br>
                 <label for="image">Upload de foto:</label>
                 <input id="image" type="file" accept="image/*" name="userImage">
@@ -156,8 +157,8 @@
                 <br>
             </fieldset>
 
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
+            <button id="send" type="submit">Enviar</button>
+            <button id="clean" type="reset">Limpar</button>
        </form> 
     </section>
 </body>
